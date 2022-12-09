@@ -1,24 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Commercial FED task</title>
-	<link href="my-style.css" rel="stylesheet" type="text/css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commercial FED task</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link href="css/my-style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-	<div class="container">
-	<div class="leftpane">
-		<div class="centered">
-			<h1><bold>Snowy Mountains</bold></h1>
-			<p></p>
-			<button class="buttonSnow">We love Cold Winter</button>
-		</div>
-	</div>
-	<div class="rightpane">
-		<img src="assets/snowy-mountain.jpg" alt="snowy-mountain">
-	</div>
-</div>
+    <div>
+        <!-- Snowy Mountains Slide -->
+        <div class="mySlides">
+            <div class="card zoom-in-out-box">
+                <img src="assets/snowy-mountain.jpg" alt="snowy-mountain"
+                    style=" box-shadow: 1px 10px 2px #90A8CE; filter: blur(0px);">
+            </div>
+            <img src="assets/snowy-mountain.jpg">
+            <div><span class="text wrapWord" style="text-decoration: underline #90A8CE;">SNOWY MOUNTAINS</span>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat.
+                </p>
+                <div class="container"><button type="button" class="snow">WE LOVE A COLD WINTER</button></div>
+            </div>
+        </div>
+        <!-- Deep Forest Slide -->
+        <div class="mySlides">
+            <div class="card zoom-in-out-box">
+                <img src="assets/deep-forest.jpg" alt="deep-forest"
+                    style=" box-shadow: 1px 10px 2px #647D5B; filter: blur(0px);">
+            </div>
+            <img src="assets/deep-forest.jpg">
+            <div><span class="text wrapWord" style="text-decoration: underline #647D5B;">DEEP FOREST</span>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat.
+                </p>
+                <div class="container"><button type="button" class="forest">OFF THE BEATEN TRACK</button></div>
+            </div>
+        </div>
+        <!-- White Sandy Beach Slide -->
+        <div class="mySlides">
+            <div class="card zoom-in-out-box">
+                <img src="assets/white-sandy-beach.jpg" alt="white-sandy-beach"
+                    style=" box-shadow: 1px 10px 2px #EFCDB0; filter: blur(0px);">
+            </div>
+            <img src="assets/white-sandy-beach.jpg">
+            <div><span class="text wrapWord" style="text-decoration: underline #EFCDB0">WHITE SANDY BEACH</span>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat.
+                </p>
+                <div class="container"><button type="button" class="beach">GO FOR A SWIM IN THE OCCEAN</button></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var myIndex = 0;
+        carousel();
+
+        //function for slideshow
+        function carousel() {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            myIndex++;
+            if (myIndex > x.length) { myIndex = 1 }
+            x[myIndex - 1].style.display = "block";
+            setTimeout(carousel, 8000); // Change image every 8 seconds
+        }
+
+    </script>
+
 </body>
+
 </html>

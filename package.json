@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/dna-ben-fowler/tdd-cts-fed/issues"
   },
-  "homepage": "https://github.com/dna-ben-fowler/tdd-cts-fed#readme"
+  "homepage": "https://github.com/dna-ben-fowler/tdd-cts-fed#readme",
+  "assets": [
+    "assets"
+ ]
 }
