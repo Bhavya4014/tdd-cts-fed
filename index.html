@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,16 +9,17 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link href="css/my-style.css" rel="stylesheet" type="text/css">
 </head>
+
 <body>
     <div>
         <!-- Snowy Mountains Slide -->
-        <div class="mySlides">
-            <div class="card zoom-in-out-box">
-                <img src="assets/snowy-mountain.jpg" alt="snowy-mountain"
-                    style=" box-shadow: 1px 10px 2px #90A8CE; filter: blur(0px);">
+        <div class="slides">
+            <div class="card1">
+                <img src="assets/snowy-mountain.jpg" alt="snowy-mountain">
             </div>
             <img src="assets/snowy-mountain.jpg">
-            <div><span class="text wrapWord" style="text-decoration: underline #90A8CE;">SNOWY MOUNTAINS</span>
+            <div>
+                <div class="text" style="text-decoration: underline #90A8CE;">SNOWY MOUNTAINS</div>
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
                     et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -27,13 +29,13 @@
             </div>
         </div>
         <!-- Deep Forest Slide -->
-        <div class="mySlides">
-            <div class="card zoom-in-out-box">
-                <img src="assets/deep-forest.jpg" alt="deep-forest"
-                    style=" box-shadow: 1px 10px 2px #647D5B; filter: blur(0px);">
+        <div class="slides">
+            <div class="card2">
+                <img src="assets/deep-forest.jpg" alt="deep-forest">
             </div>
             <img src="assets/deep-forest.jpg">
-            <div><span class="text wrapWord" style="text-decoration: underline #647D5B;">DEEP FOREST</span>
+            <div>
+                <div class="text" style="text-decoration: underline #647D5B">DEEP FOREST</div>
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
                     et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -43,13 +45,13 @@
             </div>
         </div>
         <!-- White Sandy Beach Slide -->
-        <div class="mySlides">
-            <div class="card zoom-in-out-box">
-                <img src="assets/white-sandy-beach.jpg" alt="white-sandy-beach"
-                    style=" box-shadow: 1px 10px 2px #EFCDB0; filter: blur(0px);">
+        <div class="slides">
+            <div class="card3">
+                <img src="assets/white-sandy-beach.jpg" alt="white-sandy-beach">
             </div>
             <img src="assets/white-sandy-beach.jpg">
-            <div><span class="text wrapWord" style="text-decoration: underline #EFCDB0">WHITE SANDY BEACH</span>
+            <div>
+                <div class="text" style="text-decoration: underline #EFCDB0;">WHITE SANDY BEACH</div>
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
                     et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -61,20 +63,20 @@
     </div>
 
     <script>
-        var myIndex = 0;
-        carousel();
+        var index = 0;
+        slideshow();
 
         //function for slideshow
-        function carousel() {
+        function slideshow() {
             var i;
-            var x = document.getElementsByClassName("mySlides");
+            var x = document.getElementsByClassName("slides");
             for (i = 0; i < x.length; i++) {
                 x[i].style.display = "none";
             }
-            myIndex++;
-            if (myIndex > x.length) { myIndex = 1 }
-            x[myIndex - 1].style.display = "block";
-            setTimeout(carousel, 8000); // Change image every 8 seconds
+            index++;
+            if (index > x.length) { index = 1 }
+            x[index - 1].style.display = "block";
+            setTimeout(slideshow, 8000); // Change image every 8 seconds
         }
 
     </script>
